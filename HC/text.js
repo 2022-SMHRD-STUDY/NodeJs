@@ -1,23 +1,9 @@
-var height = 170
-console.log("김헌찬 키는 "+ height);
+//현재 시간 구하기
+let time = new Date();
+let hours = time.getHours();
+let minutes = time.getMinutes();
+let seconds = time.getSeconds();
 
-console.log(`김헌찬 키는 ${height}`);
-
-let name = `김헌찬 키는 ${height}`;
-console.log(name);
-
-function a() {
-    console.log("테스트");
-}
-
-const a = () => {
-    console.log("테스트");
-}
-
-function test(a,b){
-    console.log(a+b);
-}
-
-const test = (a, b) =>{
-    
-}
+console.log(`첫번째 ______________ 걸린시간 : ${hours}시${minutes}분${seconds}초`);
+console.log(`두번째 ______________ 걸린시간 : ${hours}시${minutes}분${seconds}초`);
+console.log(`세번째 ______________ 걸린시간 : ${hours}시${minutes}분${seconds}초`);
