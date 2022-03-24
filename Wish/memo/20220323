@@ -64,3 +64,15 @@ callback : 비동기방식으로 사용할 때 넣어주는 인자 / err 와 dat
     callback: 메소드가 실행될 때 호출될 함수
         - err: 작업이 실패하면 throw되는 오류
         - files: 디렉토리의 파일을 포함하는 String, Buffer 또는 fs.Dirent 객체의 배열
+
+
+----------------------------------------------------------------------------------------------------
+1. 파일 존재 확인
+    fs.exists('test1.txt', function (exists) {
+        console.log(exists ? "it's there" : "no exists!");
+    });
+
+
+2. 디렉토리 생성 / 삭제
+    fs.mkdir(path, callback)
+    fs.rmdir(path, callback)
