@@ -1,0 +1,66 @@
+node 상에서 그냥 쓸 수 있는 모듈
+
+1. fs -> 파일 처리와 관련된 전반적인 작업을 하는 모듈
+2. url
+3. http
+4. path
+
+fs 모듈을 사용하기 위해서는 최상단에 아래 코드를 입력해야함
+    var fs = require("fs");
+(const, var, let 다 상관없음)
+
+filename : 불러올 파일의 위치 정보 / String, url, integer, Buffer 타입, 보통 문자열
+[options] : 가지고 오는 데이터의 인코딩 방식 / 생략 가능
+callback : 비동기방식으로 사용할 때 넣어주는 인자 / err 와 data를 인자로 받음
+
+1. readFile
+    (비동기적 방식)
+    fs.readFile(filename, [options], callback)
+    => filename의 파일을 [options]의 방식으로 읽은 후 callback으로 전달된 함수를 호출
+
+    (동기적)
+    fs.readFileSync(filename, [options])
+    => filename의 파일을 [options]의 방식으로 읽은 후 문자열을 반환
+
+2. writeFile
+    (비동기적)
+    fs.writeFile(filename, data, [options], callback)
+    => filename의 파일에 [options]의 방식으로 data 내용을 쓴 후 callback 함수를 호출
+
+    (동기적)
+    fs.writeFileSync(filename, data, [options])
+    => filename의 파일에 [options]의 방식으로 data 내용을 씀
+
+    동기적 방식을 사용할 때는 예외처리를 해주어야 함 (try catch)
+    비동기는 예외 발생시, callback의 err에 전달돼서 따로 예외처리 할 필요 X
+
+3. rename
+    지정된 이전 경로에 있는 파일의 이름을 지정된 새 경로로 변경하는 데 사용
+    대상 파일이 이미 있는 경우 덮어씀
+
+    (비동기적)
+    fs.rename(oldPath, newPath, callback)
+    - oldPath: 이름을 변경해야 하는 파일의 경로를 보유 / 문자열, 버퍼, URL 타입
+    - newPath: 파일의 이름을 바꿔야 하는 새 경로를 보유 / 문자열, 버퍼, URL 타입
+    - callback: 메소드가 실행될 때 호출될 함수 / 프로세스 중에 발생하는 오류를 표시하기 위한 선택적 인수가 있음
+
+    (동기적)
+    fs.renameSync(oldPath, newPath)
+
+4. unlink
+    fs.unlink(Path, callback)
+
+5. readdir
+    지정된 디렉토리의 내용을 읽는 데 사용
+    이 메서드의 콜백은 디렉터리에 있는 모든 파일 이름의 배열을 반환
+    options 인수를 사용하여 메서드에서 파일이 반환되는 형식을 변경할 수 O
+
+    fs.readdir(path, options, callback)
+
+    path: 내용을 읽어야 하는 디렉토리의 경로를 보유 / 문자열, 버퍼, URL
+    options: 메서드에 영향을 줄 선택적 매개 변수를 지정하는 데 사용할 수 있는 개체
+        - encoding: 콜백 인수에 지정된 파일 이름에 사용할 인코딩을 지정하는 문자열로, 기본값은 'utf8'
+        - withFileTypes: 파일을 fs.Dirent 객체로 반환할지 여부를 지정하는 boolean으로, 기본값은 '거짓'입니다.
+    callback: 메소드가 실행될 때 호출될 함수
+        - err: 작업이 실패하면 throw되는 오류
+        - files: 디렉토리의 파일을 포함하는 String, Buffer 또는 fs.Dirent 객체의 배열
