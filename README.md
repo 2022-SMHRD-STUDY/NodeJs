@@ -23,7 +23,8 @@
 <br>
 
 #### 3월 17일 : 헌찬___생활 코딩_커버 페이지 ~ JavaScript조건문 
->[0315 - 복사본.txt](https://github.com/2022-SMHRD-STUDY/NodeJs/files/8356258/0315.-.txt)
+[0315 - 복사본.txt](https://github.com/2022-SMHRD-STUDY/NodeJs/files/8356258/0315.-.txt)
+<br>
 > 다음 시간까지 공부할 내용 : 
 > <br>
 > 콘솔에서의 입력값 ~ 파일 목록 알아내기(성준)
@@ -37,8 +38,9 @@
 <br>
 
 #### 3월 22일 : 성준, 동진___Node.js 콘솔에서의 입력값 ~ 수업의 정상
-> [0322화.txt](https://github.com/2022-SMHRD-STUDY/NodeJs/files/8356259/0322.txt)
-> 다음 시간까지 공부할 내용 : 
+[0322화.txt](https://github.com/2022-SMHRD-STUDY/NodeJs/files/8356259/0322.txt)
+<br>
+>  다음 시간까지 공부할 내용 : 
 > <br>
 > 동기와 비동기 그리고 콜백 ~ POST 방식으로 전송된 데이터 받기(헌찬)
 > <br>
@@ -46,8 +48,8 @@
 <br>
 
 #### 3월 24일 : 헌찬, 소원___Node.js 동기와 비동기 그리고 콜백 ~ App - 글삭제 기능 완성 / 프로젝트 기획 작성
-[0323.txt](https://github.com/2022-SMHRD-STUDY/NodeJs/files/8356264/0323.txt)
-[20220323.txt](https://github.com/2022-SMHRD-STUDY/NodeJs/files/8356263/20220323.txt)
+[0323.txt](https://github.com/2022-SMHRD-STUDY/NodeJs/files/8356264/0323.txt) <br>
+[20220323.txt](https://github.com/2022-SMHRD-STUDY/NodeJs/files/8356263/20220323.txt)<br>
 > 다음 시간까지 공부할 내용 : 
 > <br>
 > JavaScript객체의 형식 ~ App객체를 이용해서 템플릿 기능 정리 정돈하기(성준)
